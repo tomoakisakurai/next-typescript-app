@@ -1,15 +1,10 @@
-# Passage
-
-![Scheme](static/passage-image.jpg)
-
 # Overview
 
 This project is a sample project on Next.js.
 
 ## references
 
-[Nuxt.js](https://nextjs.org/ 'Next.js')<br>
-<br>
+[Next.js](https://nextjs.org/ 'Next.js')<br>
 <br>
 
 # Installation & Build Setup
