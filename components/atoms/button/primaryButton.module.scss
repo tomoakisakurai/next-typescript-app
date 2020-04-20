@@ -1,0 +1,14 @@
+// primary button のスタイル
+.primay_button {
+  background: #0081cc 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 0px #005a8e;
+  border-radius: 8px;
+  opacity: 1;
+  height: 40px;
+  width: 135px;
+
+  // hover のサンプル
+  &:hover {
+    background-color: green;
+  }
+}

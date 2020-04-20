@@ -1,0 +1,7 @@
+.base_button {
+  color: #fff;
+  font-size: 14px;
+  &:focus {
+    outline: 0;
+  }
+}
