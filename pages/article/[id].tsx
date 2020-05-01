@@ -2,27 +2,25 @@ import React, { ReactElement, useState } from 'react'
 import Head from 'next/head'
 import Nav from '../../components/nav'
 
-import fetcher from '../../libs/Request'
-
 import { ArticleResponse } from '../../entities/article'
 import { Button } from '@storybook/react/demo'
 import { ArticleApi } from '../../api/articleApi'
 import { Input } from '../../components/atoms/input/Input'
 import { BaseButton } from '../../components/atoms/button/button'
 
-import style from './article.module.scss'
+// import style from './article.module.scss'
 
-const clickPost = async (txt: string) => {
-  await new ArticleApi(
-    'data',
-    { id: 'aa', navigatorId: 'n123' },
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: 1, name: txt }),
-    }
-  ).call()
-}
+// const clickPost = async (txt: string) => {
+//   await new ArticleApi(
+//     'data',
+//     { id: 'aa', navigatorId: 'n123' },
+//     {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ id: 1, name: txt }),
+//     }
+//   ).call()
+// }
 
 const Home = ({ article }) => {
   const [txt, setTxt] = useState('')
@@ -50,12 +48,10 @@ const Home = ({ article }) => {
   )
 }
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({ params, query }) {
   const article = await new ArticleApi(
-    'data',
     {
-      id: '12345',
-      navigatorId: 'n123',
+      id: query.id,
     },
     {
       method: 'get',

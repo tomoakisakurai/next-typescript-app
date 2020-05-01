@@ -10,16 +10,26 @@ export default {
 
 export const Buttons = () => (
   <>
-    {/* <BaseButton prefix={'prefix'} className={'primay-button'} size={'s'} />
-    <BaseButton
-      prefix={'prefix'}
-      className={'primay-button'}
-      onClick={action('click')}
-    />
-    <BaseButton suffix={'suffix'} />
-    <BaseButtonAnchor className={'anchor-button'} prefix /> */}
-    <PrimaryButton>
-      <span>テキスト</span>
-    </PrimaryButton>
+    <ul>
+      <li>
+        <PrimaryButton>
+          <span>テキスト</span>
+        </PrimaryButton>
+      </li>
+      <li>
+        <PrimaryButton className={'button2'}>
+          <span>テキスト2</span>
+        </PrimaryButton>
+      </li>
+    </ul>
+
+    <style jsx>{`
+      ul {
+        list-style: none;
+      }
+      li {
+        margin-bottom: 0.5rem;
+      }
+    `}</style>
   </>
 )
