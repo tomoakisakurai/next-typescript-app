@@ -10,6 +10,7 @@ const Home: NextPage = () => (
     </Head>
 
     <div className="hero">
+      テスト
       {/* <h1 className="title">{article.data.title}</h1>
       <p className="description">{article.data.read_text}</p> */}
     </div>

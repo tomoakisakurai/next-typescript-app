@@ -8,19 +8,22 @@ import { ArticleApi } from '../../api/articleApi'
 import { Input } from '../../components/atoms/input/Input'
 import { BaseButton } from '../../components/atoms/button/button'
 
+import style from './index.module.scss'
+
 // import style from './article.module.scss'
 
-// const clickPost = async (txt: string) => {
-//   await new ArticleApi(
-//     'data',
-//     { id: 'aa', navigatorId: 'n123' },
-//     {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify({ id: 1, name: txt }),
-//     }
-//   ).call()
-// }
+const clickPost = async (txt: string) => {
+  console.log(txt)
+  // await new ArticleApi(
+  //   'data',
+  //   { id: 'aa', navigatorId: 'n123' },
+  //   {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify({ id: 1, name: txt }),
+  //   }
+  // ).call()
+}
 
 const Home = ({ article }) => {
   const [txt, setTxt] = useState('')
@@ -50,8 +53,10 @@ const Home = ({ article }) => {
 
 export async function getServerSideProps({ params, query }) {
   const article = await new ArticleApi(
+    'data',
     {
       id: query.id,
+      navigatorId: 'aaa',
     },
     {
       method: 'get',
